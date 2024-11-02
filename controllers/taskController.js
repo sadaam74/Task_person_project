@@ -1,4 +1,5 @@
-,const { readTasksFromile } = require("../utils/fileHandler")
+const{IncomingForm} = require('formidable')
+const { readTasksFromile } = require("../utils/fileHandler")
 
 exports.getTasks = (req, res)=>{
     const tasks = readTasksFromfile();
@@ -6,4 +7,6 @@ exports.getTasks = (req, res)=>{
         res.end(JSON.stringify(tasks))
 
 }
-exports.
+exports.createTask = (re, res)=>{
+
+}
