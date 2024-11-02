@@ -1,4 +1,4 @@
-const { readTasksFromile } = require("../utils/fileHandler")
+,const { readTasksFromile } = require("../utils/fileHandler")
 
 exports.getTasks = (req, res)=>{
     const tasks = readTasksFromfile();
@@ -6,3 +6,4 @@ exports.getTasks = (req, res)=>{
         res.end(JSON.stringify(tasks))
 
 }
+exports.
