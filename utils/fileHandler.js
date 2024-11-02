@@ -4,7 +4,7 @@ const filepat = './dta/tasks.json';
 exports. writeTasksTofie = (tasks)=>{
     fs.writeFileSync(filepat,JSON.stringify(tasks))
 }
-exports. readTasksFromile = ()=>{
+exports. readTasksFromfile = ()=>{
    if(!fs.existsSync(filepath)){
         writeTasksTofie([])
     }
