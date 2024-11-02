@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const filepat = './dta/tasks.json';
-const writeTasksTofie = (tasks)=>{
+exports. writeTasksTofie = (tasks)=>{
     fs.writeFileSync(filepat,JSON.stringify(tasks))
 }
-const readTasksFromile = ()=>{
-    i (!fs.existsSync(filepath)){
+exports. readTasksFromile = ()=>{
+   if(!fs.existsSync(filepath)){
         writeTasksTofie([])
     }
 
