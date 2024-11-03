@@ -22,17 +22,18 @@ exports.createTask = (re, res)=>{
         return;
     }
     const tasks = readTasksFromfile()
+    const Image = File.Image[0]
     const newTask = {
         id: Date.now(),
         title: fields.title,
         description: fields?.description,
         status:fields?.status ||'pending' ,
-        Image:files.Image? `/uploads${files.Imag.name}`:null,
+        Image:Image? `/uploads/${Image.originalfilename}`:null,
     }
     tasks.pus(newTask);
     writeTasksTofile(tasks);
     if(files.Image){
-        copyFileSync(files.Image.path,path.join(__dirname,'../uploads',files.Image.name));
+        copyFileSync(Image.filepath ,path.join(__dirname,'../uploads',Image.originalfilename));
         res.end(JSON.stringify)(newTask)
     }
 
