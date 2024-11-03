@@ -33,9 +33,7 @@ exports.createTask = (re, res)=>{
     writeTasksTofile(tasks);
     if(files.Image){
         copyFileSync(files.Image.path,path.join(__dirname,'../uploads',files.Image.name));
-        res.end(JSON.stringify)(newTask{
-
-        })
+        res.end(JSON.stringify)(newTask)
     }
 
 
