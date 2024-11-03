@@ -1,10 +1,10 @@
-const { getTasks } = require("../controllers/taskController");
+const { getTasks, createTask } = require("../controllers/taskController");
 
 const taskRoutes = (req,res)=>{
     if(req.method == 'get'){
         getTasks(req ,res);
     }else if(req.method == 'post'){
-        createTask(req , res)
+        createTaskkeTask(req , res)
         
     }else if  (req.method == 'PATCH'){
         updateTask(req , res)
